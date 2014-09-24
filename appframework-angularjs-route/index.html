@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="af">
+<head>
+    <title>XDK</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0;" />
+    
+    <link rel="stylesheet" type="text/css" href="appframework/af.ui.css" />
+    <link rel="stylesheet" type="text/css" href="appframework/icons.css" />
+    <script type="text/javascript" charset="utf-8" src="appframework/appframework.ui.min.js"></script>
+    
+    <script src="angularjs/angular.min.js"></script>
+    <script src="angularjs/angular-route.min.js"></script>
+
+    <script src="app.js"></script>
+
+    <script src="cordova.js"></script>
+    <script>
+               
+function onDeviceReady(){
+    navigator.splahscreen.hide();   
+}     
+document.addEventListener("deviceready", onDeviceReady, false);
+
+//$.ui.backButtonText = "Back";
+//$.ui.useInternalRouting = false;        
+
+    </script>  
+</head>
+<body> 
+<div id="afui">
+    <div id="content" ng-controller="ProductController"> 
+        
+        <div class="panel" title="Products" id="products" data-footer="none" ng-view>
+            
+        </div>
+    
+    </div>
+</div>
+</body>
+</html>    
