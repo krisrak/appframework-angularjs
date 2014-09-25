@@ -6,47 +6,42 @@
     
     <link rel="stylesheet" type="text/css" href="appframework/af.ui.css" />
     <link rel="stylesheet" type="text/css" href="appframework/icons.css" />
-    <script type="text/javascript" charset="utf-8" src="appframework/appframework.ui.min.js"></script>
-    
-    <script src="angularjs/angular.min.js"></script>
-
-    <script src="app.js"></script>
 
     <script src="cordova.js"></script>
     <script>
-               
-function onDeviceReady(){
-    navigator.splahscreen.hide();   
-}     
-document.addEventListener("deviceready", onDeviceReady, false);
-
-$.ui.backButtonText = "Back";
-
+    function onDeviceReady(){
+        navigator.splahscreen.hide();   
+    }     
+    document.addEventListener("deviceready", onDeviceReady, false);
     </script>  
 </head>
 <body> 
-<div id="afui">
-    <div id="content" ng-controller="ProductController"> 
-        
-        <div class="panel" title="All Products" id="products" data-tab="tab1" data-footer="none">
-            <ul class="list">
-              <li ng-repeat="product in products track by $index"><a href="#details" ng-click="getDetails($index)">{{ product.ProductName }}</a></li>
-            </ul> 
+    <div id="afui">
+        <div id="content" ng-controller="ProductController"> 
+
+            <div class="panel" title="All Products" id="products" data-tab="tab1" data-footer="none">
+                <ul class="list">
+                  <li ng-repeat="product in products track by $index"><a href="#details" ng-click="getDetails($index)">{{ product.ProductName }}</a></li>
+                </ul> 
+            </div>
+
+            <div class="panel" title="Product Details" id="details" > 
+                <br>
+                <ul class="list inset">
+                    <li style="background-color:#eee"><div style="text-align:center;font-weight:bold">{{ product.ProductName }}</div></li>
+                    <li>Quantity Per Unit <span style="float:right">{{ product.QuantityPerUnit }}</span></li>
+                    <li>Reorder Level <span style="float:right">{{ product.ReorderLevel }}</span></li>
+                    <li>Unit Price <span style="float:right">{{ product.UnitPrice }}</span></li>
+                    <li>Units In Stock <span style="float:right">{{ product.UnitsInStock }}</span></li>
+                    <li>Units On Order <span style="float:right">{{ product.UnitsOnOrder }}</span></li>
+                </ul> 
+            </div>
+
         </div>
-        
-        <div class="panel" title="Product Details" id="details" > 
-            <br>
-            <ul class="list inset">
-                <li style="background-color:#eee"><div style="text-align:center;font-weight:bold">{{ product.ProductName }}</div></li>
-                <li>Quantity Per Unit <span style="float:right">{{ product.QuantityPerUnit }}</span></li>
-                <li>Reorder Level <span style="float:right">{{ product.ReorderLevel }}</span></li>
-                <li>Unit Price <span style="float:right">{{ product.UnitPrice }}</span></li>
-                <li>Units In Stock <span style="float:right">{{ product.UnitsInStock }}</span></li>
-                <li>Units On Order <span style="float:right">{{ product.UnitsOnOrder }}</span></li>
-            </ul> 
-        </div>
-    
     </div>
-</div>
+    
+    <script type="text/javascript" charset="utf-8" src="appframework/appframework.ui.min.js"></script>
+    <script src="angularjs/angular.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>    

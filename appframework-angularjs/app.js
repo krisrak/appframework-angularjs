@@ -1,14 +1,14 @@
-(function () {
-    var app = angular.module('af', []);
+$.ui.backButtonText = "Back";
 
-    app.controller('ProductController', function ($scope, $http) {
+var app = angular.module('af', []);
 
-        $http.get('http://services.odata.org/V3/Northwind/Northwind.svc/Products?$format=json').success(function(response){
-            $scope.products = response.value;
-        });
+app.controller('ProductController', function ($scope, $http) {
 
-        $scope.getDetails = function(index){
-            $scope.product = $scope.products[index];
-        }       
-    });   
-})();
+    $http.get('http://services.odata.org/V3/Northwind/Northwind.svc/Products?$format=json').success(function(response){
+        $scope.products = response.value;
+    });
+
+    $scope.getDetails = function(index){
+        $scope.product = $scope.products[index];
+    }       
+});   
