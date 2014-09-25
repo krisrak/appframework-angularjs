@@ -5,6 +5,8 @@ AngularJS + Intel App Framework samples developed using Intel XDK, demonstrate h
 
 The samples show how angular controller, templates, directives, routing and other features can be made to work when using Intel AppFramework as the UI framework.
 
+=
+
 appframework-angularjs-controller
 ---------------------------------
 
@@ -25,7 +27,8 @@ appframework-angularjs-directive
 
 `appframework-angularjs-template` folder has a simple `App Framework` example with `angularJS` that shows how to use angular directives to elements in `App Framework` panel.
 
+=
 
 How to test
 -----------
-Import the samples in [IntelXDK](http://xdk.intel.com) and preview in the `Intel XDK's emulator` or `View in Chrome` option
+Open the samples in [IntelXDK](http://xdk.intel.com) and preview in the `Intel XDK's emulator` or `View in Chrome` option. You can also build Cordova based app and install on iOS or Android device.
