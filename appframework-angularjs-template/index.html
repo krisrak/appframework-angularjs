@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="af">
+<head>
+    <title>XDK</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0;" />
+    
+    <link rel="stylesheet" type="text/css" href="appframework/af.ui.css" />
+    <link rel="stylesheet" type="text/css" href="appframework/icons.css" />
+
+    <script src="cordova.js"></script>
+    <script>   
+    function onDeviceReady(){
+        navigator.splahscreen.hide();   
+    }     
+    document.addEventListener("deviceready", onDeviceReady, false);        
+    </script>  
+</head>
+<body> 
+    <div id="afui">
+        <div id="content" ng-controller="ProductController"> 
+
+            <div class="panel" title="Products" id="products" data-footer="none">
+                <div class="button-grouped flex">
+                    <a href="#/list" data-ignore="true"  class="button icon paper">List</a>
+                    <a href="#/grid" data-ignore="true" class="button icon calendar">Grid</a>
+                    <a href="#/cards" data-ignore="true" class="button icon picture">Cards</a>
+                </div>
+                <ul class="list" ng-view></ul>    
+            </div>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" charset="utf-8" src="appframework/appframework.ui.min.js"></script>
+    
+    <script src="angularjs/angular.min.js"></script>
+    <script src="angularjs/angular-route.min.js"></script>
+
+    <script src="app.js"></script>
+
+</body>
+</html>    
