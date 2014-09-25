@@ -5,12 +5,14 @@ AngularJS + Intel App Framework samples developed using Intel XDK, demonstrate h
 
 The samples show how angular controller, templates, directives, routing and other features can be made to work when using Intel AppFramework as the UI framework.
 
+The sample app loads data from an API, the data is loaded from an oData sample API using angularJS, the data is list of products and information. The app displays the list of products and clicking on each product will show more product information in the second view. This app implementation is accomplished using different features of `angularJS` by using angular controller, templates, directives and routing.
+
 =
 
 appframework-angularjs-controller
 ---------------------------------
 
-`appframework-angularjs` folder has a simple `App Framework` example with `angularJS` that shows how a `ng-controller` can be setup to load data in the `App Framework` panels. The data is loaded from an oData sample API using angularJS's `$http.get()`
+`appframework-angularjs` folder has a simple `App Framework` example with `angularJS` that shows how a `ng-controller` can be setup to load data in the `App Framework` panels. 
 
 appframework-angularjs-route
 ----------------------------
@@ -25,7 +27,7 @@ appframework-angularjs-template
 appframework-angularjs-directive
 --------------------------------
 
-`appframework-angularjs-template` folder has a simple `App Framework` example with `angularJS` that shows how to use angular directives to elements in `App Framework` panel.
+`appframework-angularjs-template` folder has a simple `App Framework` example with `angularJS` that shows how to use angular directives to create an element in `App Framework` panel and load data in it. 
 
 =
 
