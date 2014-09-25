@@ -1,5 +1,3 @@
-$.ui.resetScrollers=false;
-
 var app = angular.module('af', ['ngRoute']);
 
 app.config(function($routeProvider){
