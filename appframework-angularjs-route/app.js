@@ -1,3 +1,5 @@
+$.ui.resetScrollers=false;
+
 var app = angular.module('af', ['ngRoute']);
 
 app.config(function($routeProvider){
@@ -17,4 +19,6 @@ app.config(function($routeProvider){
 })
 .controller('DetailController', function ($scope, $routeParams) {
     $scope.product = $scope.products[$routeParams.index]; 
+
+    $.ui.scrollToTop("products", "0ms");    // to scroll to top when loading template
 });   
