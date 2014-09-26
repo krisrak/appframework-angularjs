@@ -1,7 +1,7 @@
 appframework-angularjs
 ======================
 
-AngularJS + Intel App Framework samples developed using Intel XDK, demonstrate how `AppFramework` and `angularJS` can be used to create `Cordova` based webview apps.
+[AngularJS](https://angularjs.org/) + [Intel App Framework](http://app-framework-software.intel.com/) samples developed using [Intel XDK](http://xdk.intel.com]), demonstrates how `AppFramework` and `angularJS` can be used to create [Cordova](http://cordova.apache.org/) based webview apps.
 
 The samples show how angular controller, templates, directives, routing and other features can be made to work when using Intel AppFramework as the UI framework.
 
