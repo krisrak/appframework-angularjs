@@ -19,8 +19,10 @@
     <div id="afui">
         <div id="content" ng-controller="ProductController"> 
 
-            <div class="panel" title="All Products" id="products" data-tab="tab1" data-footer="none">
-                 <list-items/>
+            <div class="panel" title="All Products" id="products" data-footer="none">
+                <ul class="list">
+                    <list-items ng-repeat="product in products"></list-items>
+                </ul> 
             </div>
 
             <div class="panel" title="Product Details" id="details" > 

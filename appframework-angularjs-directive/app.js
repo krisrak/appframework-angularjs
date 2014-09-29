@@ -17,7 +17,13 @@ app.directive('listItems', function(){
     return {
         restrict: 'AE',
         replace: true,
-        templateUrl: 'templates/list.html'
+        templateUrl: 'templates/list.html',
+        // example showing how "long Tap" will popup the unit price for the product
+        link: function(scope, element, attributes, parentController){
+            element.on("longTap", function($index){
+                $.ui.popup({title:"Unit Price", message: scope.products[scope.$index].UnitPrice});
+            });
+        }
     }
 });
 
